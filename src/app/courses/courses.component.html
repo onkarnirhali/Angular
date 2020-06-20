@@ -1,2 +1,12 @@
-
-<button (click)="onClick($event)"  class="btn btn-primary"> Hello </button>
+<div (click)="onDivClick()"> 
+    <button (click)="onClick($event)"  class="btn btn-primary"> Hello </button>
+    <input type="text" (keyup.enter)="onKeyUp()">
+    <input  [(ngModel)]="email" (keyup.enter)="onKeyUp()">
+</div>
+<div>
+    {{car.companyName | uppercase }}  <br/>
+    {{car.cost | currency:'INR'}} <br/>
+    {{car.seats}} <br/>
+    {{car.fuel}} <br/>
+    {{car.rating | number:'1.2-2'}} <br/>
+</div>
