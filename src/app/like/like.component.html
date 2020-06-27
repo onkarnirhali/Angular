@@ -1,4 +1,36 @@
-<div>
+<!-- <div>
     <h4>Like Works</h4>
-    <button class="btn"><i class="fa fa-home"></i></button>
+    <button class="btn">
+        <i class="fa fa-heart"
+        [class.highlighted]="isLiked"
+        (click)="onClickLiked()"
+         aria-hidden="true"></i>
+    </button>
+     <fa-icon class="approve" [icon]="['fas', 'check-circle']"></fa-icon>
+</div> -->
+
+<!-- <div *ngIf="courses.length > 0; else unavailale">
+    Courses Available at this region
 </div>
+<ng-template #unavailale>
+    Courses Not Available at this region in Masses
+<ng-template>  -->
+
+    <ul class="nav nav-pills">
+        <li  [class.active]="viewMode == 'map'">
+          <a class="nav-link active" (click)="viewMode = 'map'">Map View</a>
+        </li>
+        <li [class.active]="viewMode == 'list'">
+          <a class="nav-link" (click)="viewMode = 'list'">List View</a>
+        </li>
+        <li>
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+
+      <div [ngSwitch] = "viewMode">
+          <div *ngSwitchCase="'map'">Map View</div>
+          <div *ngSwitchCase="'list'">List View</div>
+      </div>
+   
+    

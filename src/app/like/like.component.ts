@@ -8,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class LikeComponent implements OnInit {
   constructor() { }
 
-  isLiked: false;
+  isLiked: boolean;
+  courses = [1];
+  viewMode = 'map';
 
   ngOnInit(): void {
+  }
+
+  onClickLiked () {
+    this.isLiked = !this.isLiked;
   }
 
 }

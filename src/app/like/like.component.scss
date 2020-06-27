@@ -1,0 +1,22 @@
+// @import "../node_modules/bootstrap-icons/icons";
+
+
+.btn {
+    color:  #ec1414;
+    .fa {
+        color: red($color: #ec1414);
+    }
+
+    .fa-heart {
+        color: #cccccc;
+    }
+
+    .highlighted {
+        color: deepskyblue;
+    }
+}
+
+// .highlighted {
+//     color: darkgreen;
+// }
+
