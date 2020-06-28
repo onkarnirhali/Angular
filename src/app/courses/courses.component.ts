@@ -20,6 +20,25 @@ export class CoursesComponent implements OnInit {
     isFavourite: true
 
   }
+
+  courses = [
+    {id: 1, name: 'course1'},
+    {id: 2, name: 'course2'},
+    {id: 3, name: 'course3'},
+    {id: 4, name: 'course4'},
+  ];
+
+  onAdd() {
+    this.courses.push( { id:4, name:"course5"} )
+  }
+
+  log(x) { console.log(x);
+   }
+
+  onRemove(course) {
+    let index = this.courses.indexOf(course);
+    this.courses.splice(index, 1)
+  }
  
   post = {
     title: "Hello World",

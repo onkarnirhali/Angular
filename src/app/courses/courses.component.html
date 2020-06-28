@@ -1,12 +1,13 @@
-<div (click)="onDivClick()"> 
-    <button (click)="onClick($event)"  class="btn btn-primary"> Hello </button>
-    <input type="text" (keyup.enter)="onKeyUp()">
-    <input  [(ngModel)]="email" (keyup.enter)="onKeyUp()">
+<form>
+<div class="form-group">
+    <label for="firstName">First Name</label>
+    <input required ngModel name="firstName" #firstName="ngModel" (change)="log(firstName)" id="firstName" type="text" class="form-control">
+    <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.value">Firstname is required</div>
 </div>
-<div>
-    {{car.companyName | uppercase }}  <br/>
-    {{car.cost | currency:'INR'}} <br/>
-    {{car.seats}} <br/>
-    {{car.fuel}} <br/>
-    {{car.rating | number:'1.2-2'}} <br/>
+<div class="form-group">
+<label for="comment">Comment</label>
+<textarea required ngModel name="comment" #comment="ngModel" id="comment" cols="30" rows="10"></textarea>
+<div class="alert alert-danger" *ngIf="comment.touched" >Comments are appriciated</div>
 </div>
+<button class="btn btn-primary">Submit</button>
+</form>
