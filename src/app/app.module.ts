@@ -9,6 +9,7 @@ import { FavoriteComponent } from './favorite/favorite.component';
 import { PanelComponent } from './panel/panel.component';
 import { LikeComponent } from './like/like.component';
 import { SignupFormComponent } from './signup-form/signup-form/signup-form.component';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,13 @@ import { SignupFormComponent } from './signup-form/signup-form/signup-form.compo
     LikeComponent,
     SignupFormComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClient,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
